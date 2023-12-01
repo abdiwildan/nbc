@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nbc/screens/edit_profile.dart';
 import 'package:nbc/screens/base_scren.dart';
 import 'package:nbc/screens/login_screen.dart';
 import 'package:nbc/screens/register_screen.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/' :(context) => const LoginScreen(),
         '/home' :(context) =>BaseScreen(),
-        '/register' :(context) => const RegisterScreen() 
+        '/register' :(context) => const RegisterScreen(),
+        '/edit' :(context) =>const EditProfile() 
       },
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,

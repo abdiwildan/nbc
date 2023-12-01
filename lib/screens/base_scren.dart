@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nbc/constants/color_constants.dart';
 import 'package:nbc/screens/home_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nbc/screens/card_screen.dart';
+
+import 'aset_screen.dart';
 
 class BaseScreen extends StatefulWidget {
 
@@ -15,7 +16,7 @@ class _BaseScreenState extends State<BaseScreen> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    CardScreen(),
+    AsetScreen(),
     HomeScreen(),
     HomeScreen(),
   ];
@@ -37,11 +38,11 @@ class _BaseScreenState extends State<BaseScreen> {
               label: "Home",
             ),
             BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.creditCard), label: "Cards"),
+                icon: Icon(FontAwesomeIcons.database), label: "Cards"),
+            BottomNavigationBarItem(
+                icon: Icon(FontAwesomeIcons.chartBar), label: "Overview"),
             BottomNavigationBarItem(
                 icon: Icon(FontAwesomeIcons.cog), label: "Settings"),
-            BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.chartBar), label: "Overview")
           ],
           currentIndex: _selectedIndex,
           onTap: (int index) {

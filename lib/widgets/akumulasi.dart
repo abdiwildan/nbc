@@ -2,33 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:nbc/constants/app_textstyle.dart';
 import 'package:nbc/data/card_data.dart';
 
-class MyCard extends StatelessWidget {
+class Akumulasi extends StatelessWidget {
   final CardModel card;
-  const MyCard({ super.key, required this.card });
+  const Akumulasi({super.key, required this.card});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(20),
-      height: 200,
+      height: 150,
       width: 350,
       decoration: BoxDecoration(
         color: card.cardColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "CARD NAME",
+                    "Pendapatan",
                     style: ApptextStyle.MY_CARD_TITLE,
                   ),
                   Text(
@@ -37,33 +37,19 @@ class MyCard extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "EXP DATE",
-                        style: ApptextStyle.MY_CARD_TITLE,
-                      ),
-                      Text(
-                        card.expense,
-                        style: ApptextStyle.MY_CARD_SUBTITLE,
-                      ),
-                    ],
-                  ),
-                  SizedBox(width: 20),
-                ],
-              )
             ],
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 50,
-                height: 50,
-                child: Image.asset('assets/icons/mcard.png'),
+              Text(
+                "Pengeluaran",
+                style: ApptextStyle.MY_CARD_TITLE,
+              ),
+              Text(
+                card.expense,
+                style: ApptextStyle.MY_CARD_SUBTITLE,
               ),
             ],
           )

@@ -2,34 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:nbc/constants/color_constants.dart';
 
 class CardModel {
-  String cardHolderName;
-  String cardNumber;
-  String expDate;
-  String cvv;
+  String income;
+  String expense;
   Color cardColor;
 
   CardModel({
-    required this.cardHolderName,
-    required this.cardNumber,
-    required this.cvv,
-    required this.expDate,
+    required this.income,
+    required this.expense,
     required this.cardColor,
   });
 }
 
 List<CardModel> myCards = [
   CardModel(
-    cardHolderName: "John Doe",
-    cardNumber: "****  ****  ****  1234",
-    cvv: "**4",
-    expDate: "12/21",
+    income: "RP. 100.000.000",
+    expense: "Rp. 500.000",
     cardColor: kPrimaryColor,
-  ),
-  CardModel(
-    cardHolderName: "John Doe",
-    cardNumber: "****  ****  ****  4321",
-    cvv: "**1",
-    expDate: "01/22",
-    cardColor: kSecondaryColor,
   ),
 ];

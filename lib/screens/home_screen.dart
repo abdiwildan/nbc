@@ -3,35 +3,29 @@ import 'package:nbc/constants/app_textstyle.dart';
 import 'package:nbc/constants/color_constants.dart';
 import 'package:nbc/data/card_data.dart';
 import 'package:nbc/data/transaction_data.dart';
-import 'package:nbc/widgets/my_card.dart';
+import 'package:nbc/screens/SideBar.dart';
+import 'package:nbc/widgets/akumulasi.dart';
 import 'package:nbc/widgets/transaction_card.dart';
 
-
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({ super.key });
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const SideBar(),
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "My Bank",
           style: TextStyle(
             fontFamily: "Poppins",
             color: kPrimaryColor,
           ),
         ),
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: CircleAvatar(
-            backgroundImage:
-                NetworkImage("https://placeimg.com/640/480/people"),
-          ),
-        ),
         actions: [
           IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.notifications_active_outlined,
                 color: Colors.black,
                 size: 27,
@@ -40,46 +34,44 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        physics: ClampingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: 200,
+                padding: EdgeInsets.all(20),
                 child: ListView.separated(
-                    physics: ClampingScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: myCards.length,
                     separatorBuilder: (context, index) {
                       return SizedBox(
-                        width: 10,
+                        height: 20,
                       );
                     },
-                    itemCount: myCards.length,
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                      return MyCard(
+                      return Akumulasi(
                         card: myCards[index],
                       );
                     }),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text(
+              const Text(
                 "Recent Transactions",
                 style: ApptextStyle.BODY_TEXT,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               ListView.separated(
                   itemCount: myTransactions.length,
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   separatorBuilder: (context, index) {
-                    return SizedBox(
+                    return const SizedBox(
                       height: 10,
                     );
                   },
@@ -89,6 +81,96 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (BuildContext context) {
+                return SizedBox(
+                  height: 500,
+                  child: Center(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(padding: EdgeInsets.symmetric(vertical: 10)),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(
+                                  color: Colors.red,
+                                  width: 2,
+                                ),
+                              ),
+                              labelText: "Tanggal"),
+                        ),
+                        SizedBox(height: 10,),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(
+                                  color: Colors.red,
+                                  width: 2,
+                                ),
+                              ),
+                              labelText: "Pemasukan ? Pendapatan"),
+                        ),
+                        SizedBox(height: 10,),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(
+                                  color: Colors.red,
+                                  width: 2,
+                                ),
+                              ),
+                              labelText: "Aset"),
+                        ),
+                        SizedBox(height: 10,),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(
+                                  color: Colors.red,
+                                  width: 2,
+                                ),
+                              ),
+                              labelText: "Kategori"),
+                        ),
+                        SizedBox(height: 10,),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(
+                                  color: Colors.red,
+                                  width: 2,
+                                ),
+                              ),
+                              labelText: "Total"),
+                        ),
+                        SizedBox(height: 10,),
+                        ElevatedButton(
+                          onPressed: () {}, 
+                          child: Text("SAVE", style: TextStyle(color: Colors.white),),
+                          style: ElevatedButton.styleFrom(
+                          primary: Colors.blue,
+                          padding: EdgeInsets.symmetric(horizontal: 50),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              });
+        },
+        tooltip: 'Add',
+        child: Icon(Icons.add),
       ),
     );
   }
