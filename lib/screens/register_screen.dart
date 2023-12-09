@@ -142,25 +142,6 @@ class RegisterScreen extends StatelessWidget {
                             height: 20,
                           ),
                           FadeInUp(
-                            duration: Duration(milliseconds: 1500),
-                            child: Row(
-                              children: <Widget>[
-                                Text(
-                                  "Remember Me",
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                                Spacer(),
-                                Text(
-                                  "Forgot Password?",
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          FadeInUp(
                               duration: Duration(milliseconds: 1600),
                               child: MaterialButton(
                                   onPressed: () {},
@@ -185,7 +166,7 @@ class RegisterScreen extends StatelessWidget {
                               child: Row(
                                 children: <Widget>[
                                   Text(
-                                    "Don't have Account?",
+                                    "Already Account?",
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                   CupertinoButton(
@@ -193,7 +174,7 @@ class RegisterScreen extends StatelessWidget {
                                       Navigator.pushReplacementNamed(context, '/');
                                     },
                                     child: Text(
-                                      "Register here",
+                                      "Login Here",
                                       
                                     ),
                                   ),

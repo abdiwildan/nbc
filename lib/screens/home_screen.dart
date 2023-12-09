@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nbc/constants/app_textstyle.dart';
 import 'package:nbc/constants/color_constants.dart';
-import 'package:nbc/data/card_data.dart';
-import 'package:nbc/data/transaction_data.dart';
+import 'package:nbc/models/card_data.dart';
+import 'package:nbc/models/transaction_data.dart';
 import 'package:nbc/screens/SideBar.dart';
 import 'package:nbc/widgets/akumulasi.dart';
 import 'package:nbc/widgets/transaction_card.dart';

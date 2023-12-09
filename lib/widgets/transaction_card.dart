@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nbc/constants/app_textstyle.dart';
-import 'package:nbc/data/transaction_data.dart';
+import 'package:nbc/models/transaction_data.dart';
 
 class TransactionCard extends StatelessWidget {
   final TransactionModel transaction;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nbc/constants/app_textstyle.dart';
-import 'package:nbc/data/card_data.dart';
+import 'package:nbc/models/card_data.dart';
 
 class Akumulasi extends StatelessWidget {
   final CardModel card;
