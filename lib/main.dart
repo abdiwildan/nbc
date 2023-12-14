@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nbc/screens/edit_profile.dart';
-import 'package:nbc/screens/base_scren.dart';
+
 import 'package:nbc/screens/login_screen.dart';
 import 'package:nbc/screens/register_screen.dart';
+
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,14 +20,14 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/' :(context) => const LoginScreen(),
-        '/home' :(context) =>BaseScreen(),
+        '/home' :(context) =>const HomeScreen(),
         '/register' :(context) => const RegisterScreen(),
         '/edit' :(context) =>const EditProfile() 
       },
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         fontFamily: "Poppins",
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           elevation: 0,
         ),

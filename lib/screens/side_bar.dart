@@ -26,19 +26,13 @@ class SideBar extends StatelessWidget {
               Navigator.pushReplacementNamed(context, "/edit");
             },
           ),
-          ListTile(
-            leading: Icon(Icons.share),
-            title: Text("Share"),
-          ),
+          
           Divider(),
           ListTile(
             leading: Icon(Icons.settings),
             title: Text("Settings"),
           ),
-          ListTile(
-            leading: Icon(Icons.help),
-            title: Text("Help & Feedback"),
-          ),
+          
           ListTile(
             leading: Icon(Icons.info),
             title: Text("About Us"),
