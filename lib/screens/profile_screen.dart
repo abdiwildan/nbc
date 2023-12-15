@@ -78,9 +78,7 @@ class ProfileScreen extends StatelessWidget {
                     color: Colors.black
                   ),
                 ),
-                SizedBox(
-                  height: 5,
-                ),
+                
                 Text(
                   "William",
                   style: TextStyle(
@@ -90,27 +88,37 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Email",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black
+                  ),
+                ),
+                
+                Text(
+                  "William@email.com",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black
+                  ),
+                  
+                ),
+                SizedBox(
                   height: 22,
+                
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    OutlinedButton(
-                        onPressed: () {},
-                        child: Text(
-                          "CANCEL",
-                          style: TextStyle(
-                            fontSize: 16,
-                            letterSpacing: .5,
-                          ),
-                        ),
-                        style: OutlinedButton.styleFrom(
-                            padding: EdgeInsets.symmetric(horizontal: 50),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)))),
+                  
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("SAVE",
+                      child: Text("Edit Profile",
                           style: TextStyle(
                             fontSize: 16,
                             letterSpacing: 2,
