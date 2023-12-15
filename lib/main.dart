@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         fontFamily: "Poppins",
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.blue,
           elevation: 0,
         ),
         primarySwatch: Colors.blue,
