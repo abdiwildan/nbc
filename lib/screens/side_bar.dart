@@ -23,7 +23,7 @@ class SideBar extends StatelessWidget {
             leading: Icon(Icons.account_box_rounded),
             title: Text("Profile"),
             onTap: () {
-              Navigator.pushReplacementNamed(context, "/edit");
+              Navigator.pushReplacementNamed(context, "/profile");
             },
           ),
           

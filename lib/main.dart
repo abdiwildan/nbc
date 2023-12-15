@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nbc/screens/edit_profile.dart';
 
 import 'package:nbc/screens/login_screen.dart';
+import 'package:nbc/screens/profile_screen.dart';
 import 'package:nbc/screens/register_screen.dart';
 
 import 'screens/home_screen.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         '/' :(context) => const LoginScreen(),
         '/home' :(context) =>const HomeScreen(),
         '/register' :(context) => const RegisterScreen(),
-        '/edit' :(context) =>const EditProfile() 
+        '/edit' :(context) =>const EditProfile(),
+        '/profile' :(context) => ProfileScreen(), 
       },
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
