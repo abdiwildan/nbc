@@ -70,14 +70,27 @@ class ProfileScreen extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                TextFormField(
-                  initialValue: "NAmmama",
-                  decoration: InputDecoration(
-                    labelText: "Nama"
+                Text(
+                  "Nama",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black.withOpacity(0.7)
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 5,
+                ),
+                Text(
+                  "Nama",
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black.withOpacity(0.5)
+                  ),
+                ),
+                SizedBox(
+                  height: 22,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
