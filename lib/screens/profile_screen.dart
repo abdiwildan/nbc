@@ -113,7 +113,7 @@ class ProfileScreen extends StatelessWidget {
                 
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                   
                     ElevatedButton(
