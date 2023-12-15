@@ -75,18 +75,18 @@ class ProfileScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
-                    color: Colors.black.withOpacity(0.7)
+                    color: Colors.black
                   ),
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 Text(
-                  "Nama",
+                  "William",
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
-                    color: Colors.black.withOpacity(0.5)
+                    color: Colors.black
                   ),
                 ),
                 SizedBox(
