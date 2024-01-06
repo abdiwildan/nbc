@@ -8,23 +8,23 @@ class SideBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Get.find<AuthenticationRepository>();
+    // final auth = Get.find<AuthenticationRepository>();
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
           UserAccountsDrawerHeader(
             accountName: const Text('William A'),
-            accountEmail: Obx(() {
-              final user = auth.currentUser;
-              return Text(user?.displayName ?? 'Nama Pengguna Tidak Diset');
-            }),
+            // accountEmail: Obx(() {
+            //   final user = auth.currentUser;
+            //   return Text(user?.displayName ?? 'Nama Pengguna Tidak Diset');
+            // }),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(child: Image.asset('assets/icons/avatar1.png')),
             ),
             decoration: const BoxDecoration(
               color: Colors.blue,
-            ),
+            ), accountEmail: null,
           ),
           ListTile(
             leading: const Icon(Icons.account_box_rounded),
