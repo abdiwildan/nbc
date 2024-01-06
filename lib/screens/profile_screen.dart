@@ -8,18 +8,18 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Text('Edit Profile',
+          title: const Text('Edit Profile',
           style: TextStyle(
             color: Colors.white
           ),),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {Navigator.pushReplacementNamed(context, "/home");},
             color: Colors.white,
           ),
         ),
         body: Container(
-          padding: EdgeInsets.only(left: 15, top: 20, right: 15),
+          padding: const EdgeInsets.only(left: 15, top: 20, right: 15),
           child: GestureDetector(
             onTap: () {
               FocusScope.of(context).unfocus();
@@ -59,7 +59,7 @@ class ProfileScreen extends StatelessWidget {
                               ),
                               color: Colors.white,
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.edit_outlined,
                               color: Colors.blue,
                             ),
@@ -67,10 +67,10 @@ class ProfileScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Text(
+                const Text(
                   "Nama",
                   style: TextStyle(
                     fontSize: 16,
@@ -79,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 
-                Text(
+                const Text(
                   "William",
                   style: TextStyle(
                     fontSize: 15,
@@ -87,10 +87,10 @@ class ProfileScreen extends StatelessWidget {
                     color: Colors.black
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
-                Text(
+                const Text(
                   "Email",
                   style: TextStyle(
                     fontSize: 16,
@@ -99,7 +99,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 
-                Text(
+                const Text(
                   "William@email.com",
                   style: TextStyle(
                     fontSize: 15,
@@ -108,7 +108,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 22,
                 
                 ),
@@ -118,17 +118,17 @@ class ProfileScreen extends StatelessWidget {
                   
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("Edit Profile",
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.blue,
+                          padding: const EdgeInsets.symmetric(horizontal: 50),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                      child: const Text("Edit Profile",
                           style: TextStyle(
                             fontSize: 16,
                             letterSpacing: 2,
                             color: Colors.white,
                           )),
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
-                          padding: EdgeInsets.symmetric(horizontal: 50),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20))),
                     )
                   ],
                 )

@@ -9,7 +9,7 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       height: 200,
       width: 350,
       decoration: BoxDecoration(
@@ -27,7 +27,7 @@ class MyCard extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "CARD NAME",
                     style: ApptextStyle.MY_CARD_TITLE,
                   ),
@@ -42,7 +42,7 @@ class MyCard extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "EXP DATE",
                         style: ApptextStyle.MY_CARD_TITLE,
                       ),
@@ -52,7 +52,7 @@ class MyCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                 ],
               )
             ],

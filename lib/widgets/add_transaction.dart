@@ -16,75 +16,74 @@ class _AddTransactionState extends State<AddTransaction> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Padding(padding: EdgeInsets.symmetric(vertical: 10)),
+                        const Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                         TextFormField(
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.red,
                                   width: 2,
                                 ),
                               ),
                               labelText: "Tanggal"),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         TextFormField(
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.red,
                                   width: 2,
                                 ),
                               ),
                               labelText: "Pemasukan ? Pendapatan"),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         TextFormField(
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.red,
                                   width: 2,
                                 ),
                               ),
                               labelText: "Aset"),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         TextFormField(
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.red,
                                   width: 2,
                                 ),
                               ),
                               labelText: "Kategori"),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         TextFormField(
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.red,
                                   width: 2,
                                 ),
                               ),
                               labelText: "Total"),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         ElevatedButton(
-                          onPressed: () {}, 
-                          child: Text("SAVE", style: TextStyle(color: Colors.white),),
+                          onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
-                          padding: EdgeInsets.symmetric(horizontal: 50),
+                          padding: const EdgeInsets.symmetric(horizontal: 50),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20))),
+                              borderRadius: BorderRadius.circular(20))), 
+                          child: const Text("SAVE", style: TextStyle(color: Colors.white),),
                         )
                       ],
                     ),

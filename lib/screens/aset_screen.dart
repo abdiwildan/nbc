@@ -11,13 +11,13 @@ class _AsetScreenState extends State<AsetScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(
+      appBar: AppBar(title: const Text(
         "Aset"
       ),),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         
       ),
     );

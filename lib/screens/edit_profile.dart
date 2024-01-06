@@ -15,18 +15,18 @@ class _EditProfileState extends State<EditProfile> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Text('Edit Profile',
+          title: const Text('Edit Profile',
           style: TextStyle(
             color: Colors.white
           ),),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {Navigator.pushReplacementNamed(context, "/home");},
             color: Colors.white,
           ),
         ),
         body: Container(
-          padding: EdgeInsets.only(left: 15, top: 20, right: 15),
+          padding: const EdgeInsets.only(left: 15, top: 20, right: 15),
           child: GestureDetector(
             onTap: () {
               FocusScope.of(context).unfocus();
@@ -66,7 +66,7 @@ class _EditProfileState extends State<EditProfile> {
                               ),
                               color: Colors.white,
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.edit_outlined,
                               color: Colors.blue,
                             ),
@@ -74,13 +74,13 @@ class _EditProfileState extends State<EditProfile> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 buildTextField("Full Name", "Willia,", false),
                 buildTextField("Email", "WilliamA@mail.com", false),
                 buildTextField("Password", "****", true),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -88,7 +88,7 @@ class _EditProfileState extends State<EditProfile> {
                   children: [
                     OutlinedButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           "CANCEL",
                           style: TextStyle(
                             fontSize: 16,
@@ -96,12 +96,12 @@ class _EditProfileState extends State<EditProfile> {
                           ),
                         ),
                         style: OutlinedButton.styleFrom(
-                            padding: EdgeInsets.symmetric(horizontal: 50),
+                            padding: const EdgeInsets.symmetric(horizontal: 50),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20)))),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("SAVE",
+                      child: const Text("SAVE",
                           style: TextStyle(
                             fontSize: 16,
                             letterSpacing: 2,
@@ -109,7 +109,7 @@ class _EditProfileState extends State<EditProfile> {
                           )),
                       style: ElevatedButton.styleFrom(
                           primary: Colors.blue,
-                          padding: EdgeInsets.symmetric(horizontal: 50),
+                          padding: const EdgeInsets.symmetric(horizontal: 50),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20))),
                     )
@@ -124,24 +124,24 @@ class _EditProfileState extends State<EditProfile> {
   Widget buildTextField(
       String labelText, String placeholder, bool isPasswordTextField) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 30),
+      padding: const EdgeInsets.only(bottom: 30),
       child: TextField(
         obscureText: isPasswordTextField ? isObscurePassword : false,
         decoration: InputDecoration(
             suffixIcon: isPasswordTextField
                 ? IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.remove_red_eye,
                       color: Colors.grey,
                     ),
                   )
                 : null,
-            contentPadding: EdgeInsets.only(bottom: 5),
+            contentPadding: const EdgeInsets.only(bottom: 5),
             labelText: labelText,
             floatingLabelBehavior: FloatingLabelBehavior.always,
             hintText: placeholder,
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
               color: Colors.black26,

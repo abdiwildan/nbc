@@ -9,7 +9,7 @@ class Akumulasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       height: 150,
       width: 350,
       decoration: BoxDecoration(
@@ -27,7 +27,7 @@ class Akumulasi extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Pendapatan",
                     style: ApptextStyle.MY_CARD_TITLE,
                   ),
@@ -43,7 +43,7 @@ class Akumulasi extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Pengeluaran",
                 style: ApptextStyle.MY_CARD_TITLE,
               ),

@@ -10,7 +10,7 @@ class TransactionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: Colors.grey)),
@@ -22,14 +22,14 @@ class TransactionCard extends StatelessWidget {
               Container(
                 height: 60,
                 width: 60,
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: transaction.color,
                 ),
                 child: Image.asset(transaction.avatar),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Column(
@@ -62,17 +62,17 @@ class TransactionCard extends StatelessWidget {
                   Row(
                     children: [
                       transaction.changePercentageIndicator == "up"
-                          ? Icon(
+                          ? const Icon(
                               FontAwesomeIcons.levelUpAlt,
                               size: 10,
                               color: Colors.green,
                             )
-                          : Icon(
+                          : const Icon(
                               FontAwesomeIcons.levelDownAlt,
                               size: 10,
                               color: Colors.red,
                             ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       Text(
